@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark mode & light mode</title>
+    <style>
+      body {
+        background-color: rgb(255, 255, 255);
+        color: black;
+      }
+      p {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body id="tt">
+    <p style="width: 50%">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus doloribus
+      quibusdam maxime magni debitis ad eius amet repudiandae, libero deserunt
+      cumque provident nostrum, totam et corrupti delectus esse exercitationem
+      vitae?
+    </p>
+    <button onclick="darkMode()">Dark mode</button>
+    <button onclick="lightMode()">light mode</button>
+    <script>
+      function darkMode() {
+        document.getElementById("tt").style.backgroundColor = "black";
+        document.getElementById("tt").style.color = "white";
+      }
+      function lightMode() {
+        document.getElementById("tt").style.backgroundColor = "white";
+        document.getElementById("tt").style.color = "black";
+      }
+    </script>
+  </body>
+</html>

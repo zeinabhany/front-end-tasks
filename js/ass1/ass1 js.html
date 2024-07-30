@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js-ass</title>
+  </head>
+  <!-- img styling  starts-->
+  <body style="background-color: black">
+    <div style="margin: 5px auto">
+      <button onclick="border()">border</button>
+      <button onclick="borderRadius()">borderradius</button>
+      <button onclick="opacity()">opacity</button>
+      <button onclick="visibility()">visibility</button>
+    </div>
+    <img src="https://cdn.aseeralkotb.com/storage/media/304680/conversions/aleph-2-25978-250x375-webp.webp" alt="pic" id="image1" />
+    <!-- img styling ends -->
+    <!-- text styling starts -->
+     <hr style="color: antiquewhite;">
+     <div>
+        <div class="opacity-class">
+            <h2 id="text1" style="color: dimgrey;">Lorem ipsum dolor sit amet consectetur adipisicing elit.deleniti eveniet cupiditate!</h2>
+
+        </div>
+    <button onclick="smaller()">smaller</button>
+    <button onclick="larger()">larger</button>
+    <button onclick="color()">color</button>
+    <button onclick="opacityy()">opacityy</button>
+    <!-- <button onclick="visibility()">visibility</button> -->
+    <button onclick="display()">diplay</button>
+</div><!--  text styling ends -->
+    <script>
+      // img styling starts
+      function border() {
+        document.getElementById("image1").style.border = "10px solid white";
+      }
+      function borderRadius() {
+        document.getElementById("image1").style.borderRadius = "40px";
+      }
+      function opacity() {
+        document.getElementById("image1").style.opacity = ".5";
+      }
+      function visibility() {
+        document.getElementById("image1").style.visibility = "hidden";
+      }
+      // img styling ends
+      // text styling starts
+      function smaller() {
+        document.getElementById("text1").style.fontSize = "5px ";
+      }
+      function larger() {
+        document.getElementById("text1").style.fontSize = "50px";
+      }
+      function color() {
+        document.getElementById("text1").style.color = "white";
+      }
+      function opacityy() {
+        document.getElementById("text1").style.opacity = ".5";
+      }
+      function display() {
+        document.getElementById("text1").style.display = "none";
+      }
+     
+      //text styling ends
+    </script>
+  </body>
+</html>

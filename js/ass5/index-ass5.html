@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="date" id="date" placeholder=" Enter the date" />
+    <button onclick="date('date') ">result</button>
+    <script>
+      function date(d) {
+        let da = new Date(document.getElementById(d).value);
+        console.log(da);
+        // document.write(da.getFullYear()) += '<br>';
+        // document.write(da.getMonth()) += '<br>';
+        // document.write(da.getDay()) += '<br>';
+        document.write(
+          da.getFullYear() + "<br>" + da.getMonth() + "<br>" + da.getDay()
+        );
+      }
+    </script>
+  </body>
+</html>

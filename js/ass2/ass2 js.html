@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <title>Ass2</title>
+    <style>
+      body {
+        margin: 20px;
+      }
+      form div div {
+        padding: 5px;
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        align-content: flex-start;
+        flex-grow: 1;
+      }
+      button {
+        border: 2px solid #bcbcbc;
+        margin: 10px auto;
+        padding: 10px;
+        background-color: #eee;
+        font-weight: bold;
+      }
+
+      button:hover {
+        background-color: #2bb755;
+        color: black;
+      }
+      table {
+        padding: 5px;
+        width: 30%;
+        border-spacing: 2px;
+        border: 1px solid rgb(0, 0, 0);
+        /* margin: 10px; */
+      }
+      form table tbody tr {
+        border: 1px solid rgb(58, 58, 58);
+      }
+      form table thead th {
+        border: 1px solid rgb(58, 58, 58);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- start input form -->
+    <form id="formEdit" onsubmit="return false">
+      <div class="all">
+        <div>
+          <label>Name</label>
+          <input id="name" />
+        </div>
+        <div>
+          <label>Age</label>
+          <input id="age" type="number" />
+        </div>
+        <div>
+          <label>Tel</label>
+          <input id="tel" type="number" />
+        </div>
+        <div>
+          <label>Address</label>
+          <input id="address" />
+        </div>
+      </div>
+      <div>
+        <button onclick="fillFormAtTable()">fill the form</button>
+      </div>
+
+      <!-- start table -->
+      <table>
+        <thead>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Tel</th>
+          <th>Address</th>
+        </thead>
+        <tbody id="ta-body">
+          <tr>
+            <td>zeinab</td>
+            <td>24</td>
+            <td>010-6880-7881</td>
+            <td>New-Damitta</td>
+          </tr>
+        </tbody>
+      </table>
+      <div>
+        <button onclick="resetTable()">Reset</button>
+      </div>
+      <!-- end table -->
+      <!-- end input form -->
+
+      <!-- js code -->
+      <script>
+        function fillFormAtTable(formEdit) {
+          var name = document.getElementById("name").value;
+          var age = document.getElementById("age").value;
+          var tel = document.getElementById("tel").value;
+          var address = document.getElementById("address").value;
+          document.getElementById("ta-body").innerHTML +=
+            " <tr><td>" +
+            name +
+            "</td><td>" +
+            age +
+            "</td><td>" +
+            tel +
+            "</td><td>" +
+            address +
+            "</td>      </tr>";
+
+          document.getElementById("name").value = "";
+          document.getElementById("age").value = "";
+          document.getElementById("address").value = "";
+          document.getElementById("tel").value = "";
+        }
+
+        function resetTable() {
+          document.getElementById("ta-body").innerHTML = "";
+        }
+      </script>
+    </form>
+  </body>
+</html>

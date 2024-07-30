@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calculator</title>
+    <style>
+      div {
+        padding: 5px;
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        align-content: flex-start;
+        flex-grow: 1;
+      }
+      p{
+        border: 1px solid black;
+      }
+     
+
+      button:hover {
+        background-color: rgb(138, 202, 207);
+        /* color: rgb(12, 33, 138); */
+      }
+    </style>
+  </head>
+  <body>
+    
+    <div >
+      <label for="n1"> Enter firt num</label>
+      <input type="number" id="n1" />
+    </div>
+    <div>
+      <label for="n2"> Enter second num</label>
+      <input type="number" id="n2" />
+    </div>
+    <div >
+      <p id="total">0</p>
+     
+    </div>
+    <br><br>
+    <div><button onclick="tot()">Ruselt</div>
+    <div><button onclick="clearr()">Clear</div>
+    <br>
+   
+     <div>
+    <script>
+      function tot() {
+        var num1 = document.getElementById("n1").value;
+        var num2 = document.getElementById("n2").value;
+        num1 = Number.parseFloat(num1);
+        num2 = Number.parseFloat(num2);
+
+        var sum = num1 + num2;
+        document.getElementById("total").innerHTML = sum;
+      }
+
+      function clearr() {
+        var num1 = (document.getElementById("n1").value = 0);
+        var num2 = (document.getElementById("n2").value = 0);
+        document.getElementById("total").innerHTML = 0;
+      }
+    </script>
+  </body>
+</html>

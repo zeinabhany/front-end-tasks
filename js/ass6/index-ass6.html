@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <br />
+    <input type="text" id="ttt" placeholder="Enter your text" />
+    <input type="number" id="rrr" placeholder="how many times you repeat" />
+    <button onclick="re()">repeat</button>
+    <p id="j"></p>
+    <script>
+      function re() {
+        //   var m = "hellow i am zeinab<br>";
+        var m = document.getElementById("ttt").value;
+        r = document.getElementById("rrr").value;
+        if (r > 0) {
+          document.getElementById("j").innerHTML = m.repeat(r);
+        } else {
+          document.getElementById("j").innerHTML = "please enter num >0";
+        }
+      }
+    </script>
+  </body>
+</html>
